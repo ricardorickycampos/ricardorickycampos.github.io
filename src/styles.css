@@ -16,6 +16,7 @@
   
 }
 
+
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -112,6 +113,27 @@ nav a:hover {
 #links a:hover {
   color: var(--bg-color);
   background-color: var(--accent-color);
+}
+
+#scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 section {
